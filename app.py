@@ -12,7 +12,7 @@ def home():
 @api.route('/predict',methods=['GET'])
 def predict():
     N=request.args.get('N')
-    N=float(n)
+    N=float(N)
     P=request.args.get('P')
     P=float(p)
     K=request.args.get('K')

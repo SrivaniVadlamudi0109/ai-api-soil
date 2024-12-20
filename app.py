@@ -1,6 +1,5 @@
 import pickle
 from flask import Flask,request 
-
 api=Flask(__name__)
 
 with open('ai.pkl','rb') as f:
@@ -27,18 +26,10 @@ def predict():
     R=request.args.get('R')
     R=float(R)
     data=[[N,P,K,T,H,PH,R]]
-    response=ai.predict.(data)[0]
+    response=ai.predict(data)[0]
     return response
 if __name__=="__main__":
     api.run(
         host='0.0.0.0',
         port=2000
     )
-
-
-
-
-
-
-
-
